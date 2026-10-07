@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>[SISTER'S NAME] — Bachelorette 2026</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+    :root {
+      --bg: #070707;
+      --bg-soft: #0d0d0d;
+      --card: #121212;
+      --gold: #d4af37;
+      --gold-light: #f3df91;
+      --gold-dark: #80631a;
+      --white: #f7f3e8;
+      --muted: #a8a49a;
+      --red: #8c1c1c;
+      --border: rgba(212, 175, 55, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(
+          circle at 50% -10%,
+          rgba(212,175,55,.14),
+          transparent 40%
+        ),
+        var(--bg);
+
+      color: var(--white);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+    }
+
+    /* ==============================
+       HERO
+    ============================== */
+
+    .hero {
+      min-height: 100vh;
+      min-height: 100svh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      position: relative;
+      overflow: hidden;
+
+      padding: 40px 20px;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero::before,
+    .hero::after {
+      position: absolute;
+
+      font-family: Georgia, serif;
+
+      font-size: clamp(160px, 30vw, 400px);
+
+      color: rgba(212,175,55,.035);
+
+      pointer-events: none;
+    }
+
+    .hero::before {
+      content: "♠";
+
+      left: -40px;
+      top: -60px;
+    }
+
+    .hero::after {
+      content: "♥";
+
+      right: -50px;
+      bottom: -120px;
+
+      color: rgba(140,28,28,.055);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+
+      text-transform: uppercase;
+
+      letter-spacing: 5px;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: Cinzel, serif;
+
+      font-size: clamp(42px, 9vw, 90px);
+
+      line-height: 1.05;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero-subtitle {
+      color: var(--muted);
+
+      font-size: clamp(15px, 2vw, 19px);
+
+      max-width: 650px;
+
+      margin: auto;
+    }
+
+    .date {
+      margin-top: 30px;
+
+      color: var(--white);
+
+      font-family: Cinzel, serif;
+
+      font-size: 18px;
+
+      letter-spacing: 2px;
+    }
+
+    /* ==============================
+       PLAYING CARDS
+    ============================== */
+
+    .cards {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 12px;
+
+      margin: 40px 0;
+    }
+
+    .playing-card {
+      width: 58px;
+      height: 80px;
+
+      background: #f4f1e8;
+
+      color: #111;
+
+      border-radius: 6px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      font-family: Georgia, serif;
+
+      font-size: 34px;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,.45);
+
+      transform: rotate(-7deg);
+    }
+
+    .playing-card:nth-child(2) {
+      transform: rotate(7deg);
+
+      color: #9b2020;
+    }
+
+    .playing-card:nth-child(3) {
+      transform: rotate(-2deg);
+    }
+
+    /* ==============================
+       COUNTDOWN
+    ============================== */
+
+    .countdown {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      margin-top: 25px;
+    }
+
+    .count-box {
+      min-width: 65px;
+
+      padding: 10px 8px;
+
+      background: rgba(255,255,255,.03);
+
+      border: 1px solid var(--border);
+    }
+
+    .count-box strong {
+      display: block;
+
+      font-family: Cinzel, serif;
+
+      font-size: 22px;
+
+      color: var(--gold);
+    }
+
+    .count-box span {
+      display: block;
+
+      font-size: 9px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+
+      color: var(--muted);
+    }
+
+    /* ==============================
+       SECTIONS
+    ============================== */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+
+      margin-bottom: 60px;
+    }
+
+    .section-heading .label {
+      color: var(--gold);
+
+      font-size: 11px;
+
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+
+      font-weight: 700;
+
+      margin-bottom: 12px;
+    }
+
+    .section-heading h2 {
+      font-family: Cinzel, serif;
+
+      font-size: clamp(30px, 5vw, 48px);
+
+      font-weight: 500;
+    }
+
+    /* ==============================
+       TIMELINE
+    ============================== */
+
+    .timeline {
+      position: relative;
+
+      max-width: 900px;
+
+      margin: auto;
+    }
+
+    .timeline::before {
+      content: "";
+
+      position: absolute;
+
+      left: 50%;
+
+      top: 0;
+
+      bottom: 0;
+
+      width: 1px;
+
+      background:
+        linear-gradient(
+          to bottom,
+          transparent,
+          var(--gold),
+          var(--gold),
+          transparent
+        );
+    }
+
+    .event {
+      width: 50%;
+
+      padding: 0 45px 75px;
+
+      position: relative;
+    }
+
+    .event:nth-child(odd) {
+      margin-right: auto;
+
+      text-align: right;
+    }
+
+    .event:nth-child(even) {
+      margin-left: 50%;
+
+      text-align: left;
+    }
+
+    .event::after {
+      content: "";
+
+      position: absolute;
+
+      top: 5px;
+
+      width: 15px;
+      height: 15px;
+
+      border-radius: 50%;
+
+      background: var(--bg);
+
+      border: 2px solid var(--gold);
+
+      box-shadow:
+        0 0 0 5px rgba(212,175,55,.08);
+    }
+
+    .event:nth-child(odd)::after {
+      right: -8px;
+    }
+
+    .event:nth-child(even)::after {
+      left: -8px;
+    }
+
+    .event-time {
+      font-family: Cinzel, serif;
+
+      font-size: 25px;
+
+      color: var(--gold);
+
+      margin-bottom: 5px;
+    }
+
+    .event h3 {
+      font-family: Cinzel, serif;
+
+      font-size: 25px;
+
+      margin-bottom: 10px;
+    }
+
+    .event p {
+      color: var(--muted);
+
+      margin-bottom: 18px;
+    }
+
+    .event-meta {
+      display: inline-flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+    }
+
+    .tag {
+      border: 1px solid var(--border);
+
+      padding: 5px 10px;
+
+      border-radius: 20px;
+
+      font-size: 11px;
+
+      color: var(--gold-light);
+
+      background: rgba(212,175,55,.04);
+    }
+
+    .location {
+      margin-top: 15px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+    .event-link {
+      display: inline-block;
+
+      margin-top: 12px;
+
+      color: var(--gold);
+
+      text-decoration: none;
+
+      font-size: 11px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+
+      border-bottom: 1px solid var(--gold-dark);
+
+      padding-bottom: 3px;
+    }
+
+    .event-link:hover {
+      color: var(--gold-light);
+    }
+
+    /* ==============================
+       CASINO FEATURE
+    ============================== */
+
+    .casino-feature {
+      position: relative;
+
+      overflow: hidden;
+
+      border-top: 1px solid var(--border);
+
+      border-bottom: 1px solid var(--border);
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(212,175,55,.11),
+          transparent 55%
+        ),
+        #0c0c0c;
+    }
+
+    .casino-feature::before {
+      content: "♣  ♦  ♥  ♠";
+
+      position: absolute;
+
+      top: 15px;
+
+      left: 0;
+      right: 0;
+
+      text-align: center;
+
+      color: rgba(212,175,55,.06);
+
+      font-size: 100px;
+
+      letter-spacing: 30px;
+
+      white-space: nowrap;
+    }
+
+    .casino-content {
+      position: relative;
+
+      z-index: 2;
+
+      text-align: center;
+
+      max-width: 800px;
+
+      margin: auto;
+    }
+
+    .casino-badge {
+      display: inline-block;
+
+      border: 1px solid var(--gold);
+
+      color: var(--gold);
+
+      padding: 7px 15px;
+
+      border-radius: 50px;
+
+      font-size: 10px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 3px;
+
+      margin-bottom: 25px;
+    }
+
+    .casino-content h2 {
+      font-family: Cinzel, serif;
+
+      font-size: clamp(38px, 8vw, 70px);
+
+      line-height: 1.05;
+
+      margin-bottom: 20px;
+    }
+
+    .casino-content h2 span {
+      color: var(--gold);
+    }
+
+    .casino-content p {
+      color: var(--muted);
+
+      max-width: 600px;
+
+      margin: auto;
+    }
+
+    .casino-button {
+      display: inline-block;
+
+      margin-top: 30px;
+
+      padding: 14px 28px;
+
+      border: 1px solid var(--gold);
+
+      color: var(--gold);
+
+      text-decoration: none;
+
+      text-transform: uppercase;
+
+      letter-spacing: 2px;
+
+      font-size: 11px;
+
+      transition: .25s;
+    }
+
+    .casino-button:hover {
+      background: var(--gold);
+
+      color: #111;
+    }
+
+    /* ==============================
+       QUICK INFO
+    ============================== */
+
+    .info-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .info-card {
+      background: var(--card);
+
+      border: 1px solid var(--border);
+
+      padding: 30px;
+
+      text-align: center;
+    }
+
+    .info-card .icon {
+      font-size: 30px;
+
+      margin-bottom: 12px;
+    }
+
+    .info-card h3 {
+      font-family: Cinzel, serif;
+
+      color: var(--gold);
+
+      margin-bottom: 8px;
+    }
+
+    .info-card p {
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+    /* ==============================
+       FOOTER
+    ============================== */
+
+    footer {
+      padding: 50px 20px;
+
+      text-align: center;
+
+      border-top: 1px solid var(--border);
+
+      color: var(--muted);
+    }
+
+    footer strong {
+      color: var(--gold);
+
+      font-family: Cinzel, serif;
+    }
+
+    /* ==============================
+       MOBILE
+    ============================== */
+
+    @media (max-width: 700px) {
+
+      section {
+        padding: 65px 0;
+      }
+
+      .timeline::before {
+        left: 8px;
+      }
+
+      .event,
+      .event:nth-child(even),
+      .event:nth-child(odd) {
+        width: 100%;
+
+        margin: 0;
+
+        padding:
+          0
+          0
+          55px
+          40px;
+
+        text-align: left;
+      }
+
+      .event::after,
+      .event:nth-child(odd)::after,
+      .event:nth-child(even)::after {
+        left: 1px;
+
+        right: auto;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 100svh;
+      }
+
+      .playing-card {
+        width: 45px;
+        height: 63px;
+
+        font-size: 26px;
+      }
+
+      .countdown {
+        gap: 5px;
+      }
+
+      .count-box {
+        min-width: 55px;
+      }
+
+      .count-box strong {
+        font-size: 18px;
+      }
+
+      .casino-feature::before {
+        font-size: 60px;
+
+        letter-spacing: 10px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =====================================
+       HERO
+  ====================================== -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        The Bride's Final Hand
+      </div>
+
+      <h1>
+        [SISTER'S NAME]
+        <br>
+        <span>Casino Royale</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        One bride.
+        Four stops.
+        One very long day.
+        <br><br>
+        Come dressed, come ready,
+        and don't fold early.
+      </p>
+
+      <div class="date">
+        SATURDAY · 24 OCTOBER 2026
+      </div>
+
+      <div class="cards">
+        <div class="playing-card">♠</div>
+        <div class="playing-card">♥</div>
+        <div class="playing-card">♦</div>
+      </div>
+
+
+      <!-- COUNTDOWN -->
+
+      <div class="countdown">
+
+        <div class="count-box">
+          <strong id="days">--</strong>
+          <span>Days</span>
+        </div>
+
+        <div class="count-box">
+          <strong id="hours">--</strong>
+          <span>Hours</span>
+        </div>
+
+        <div class="count-box">
+          <strong id="minutes">--</strong>
+          <span>Minutes</span>
+        </div>
+
+        <div class="count-box">
+          <strong id="seconds">--</strong>
+          <span>Seconds</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================
+       TIMELINE
+  ====================================== -->
+
+  <main>
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="label">
+            The itinerary
+          </div>
+
+          <h2>
+            Place Your Bets
+          </h2>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+          <!-- =================================
+               KITCHEN TEA
+          ================================== -->
+
+          <article class="event">
+
+            <div class="event-time">
+              11:00 – 14:00
+            </div>
+
+            <h3>
+              🍳 Kitchen Tea
+            </h3>
+
+            <p>
+              We kick off the day with the Kitchen Tea.
+              Come ready to celebrate the bride-to-be
+              before the day's adventures begin.
+            </p>
+
+            <div class="event-meta">
+
+              <span class="tag">
+                Everyone
+              </span>
+
+              <span class="tag">
+                11:00 Start
+              </span>
+
+            </div>
+
+            <div class="location">
+              📍 92 A Totius Rd, Roodekrans, Roodepoort
+            </div>
+
+            <a
+              href="https://www.google.com/maps?rlz=1C1CHBF_enZA1179ZA1179&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDI0NzBqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=za&sa=X&geocode=KfevLsivn5UeMRxDhpMoXKuc&daddr=92+A+Totius+Rd,+Roodekrans+183-Iq,+Roodepoort,+2040"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="event-link"
+            >
+              📍 Navigate to Kitchen Tea →
+            </a>
+
+          </article>
+
+
+          <!-- =================================
+               HOTSHOTS
+          ================================== -->
+
+          <article class="event">
+
+            <div class="event-time">
+              14:30 – 16:30
+            </div>
+
+            <h3>
+              ⛳ Hotshots
+            </h3>
+
+            <p>
+              Time to see who actually has a golf game.
+              Six players will take on Hotshots at
+              World of Golf.
+            </p>
+
+            <div class="event-meta">
+
+              <span class="tag">
+                6 Players
+              </span>
+
+              <span class="tag">
+                Spectators Welcome
+              </span>
+
+            </div>
+
+            <div class="location">
+              📍 Cnr Woodmead & Maxwell Dr, Waterfall, Midrand
+            </div>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=World+of+Golf+Hotshots+Cnr+Woodmead+Maxwell+Dr+Waterfall+Midrand+1682"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="event-link"
+            >
+              📍 Navigate to Hotshots →
+            </a>
+
+          </article>
+
+
+          <!-- =================================
+               BLIK SKUD
+          ================================== -->
+
+          <article class="event">
+
+            <div class="event-time">
+              17:00 – 18:00
+            </div>
+
+            <h3>
+              💥 Blik Skud
+            </h3>
+
+            <p>
+              Time for the bride to let off some steam.
+              Everyone is welcome to join for an hour
+              of Blik Skud.
+            </p>
+
+            <div class="event-meta">
+
+              <span class="tag">
+                Everyone
+              </span>
+
+              <span class="tag">
+                17:00 Start
+              </span>
+
+            </div>
+
+            <div class="location">
+              📍 Woodmead Retail Park
+            </div>
+
+            <a
+              href="https://maps.app.goo.gl/ZjPiYer8rhvLg6Gt9"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="event-link"
+            >
+              📍 Navigate to Blik Skud →
+            </a>
+
+          </article>
+
+
+          <!-- =================================
+               CASINO NIGHT
+          ================================== -->
+
+          <article class="event">
+
+            <div class="event-time">
+              19:00 – LATE
+            </div>
+
+            <h3>
+              🎰 Casino Night
+            </h3>
+
+            <p>
+              The main event.
+              Everyone comes together at the
+              Shingara Sands Clubhouse for Casino Night.
+            </p>
+
+            <div class="event-meta">
+
+              <span class="tag">
+                EVERYONE
+              </span>
+
+              <span class="tag">
+                19:00 Start
+              </span>
+
+              <span class="tag">
+                Late Finish
+              </span>
+
+            </div>
+
+            <div class="location">
+              📍 Shingara Sands Clubhouse
+            </div>
+
+            <a
+              href="https://maps.app.goo.gl/7qU85tEiAixVwnDH9"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="event-link"
+            >
+              📍 Navigate to Casino Night →
+            </a>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CASINO NIGHT FEATURE
+    ====================================== -->
+
+    <section
+      class="casino-feature"
+      id="casino"
+    >
+
+      <div class="container">
+
+        <div class="casino-content">
+
+          <div class="casino-badge">
+            Everyone's Invited
+          </div>
+
+          <h2>
+            Casino
+            <br>
+            <span>Night</span>
+          </h2>
+
+          <p>
+            19:00 until late at the
+            Shingara Sands Clubhouse.
+            <br><br>
+            This is the one event
+            <strong>everyone</strong>
+            should be at.
+          </p>
+
+          <a
+            href="https://maps.app.goo.gl/7qU85tEiAixVwnDH9"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="casino-button"
+          >
+            Get Directions
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         QUICK INFO
+    ====================================== -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="label">
+            Know before you go
+          </div>
+
+          <h2>
+            The Fine Print
+          </h2>
+
+        </div>
+
+
+        <div class="info-grid">
+
+
+          <div class="info-card">
+
+            <div class="icon">
+              ♠
+            </div>
+
+            <h3>
+              Hotshots
+            </h3>
+
+            <p>
+              Six people will play.
+              Spectators are absolutely welcome
+              to come watch and support.
+            </p>
+
+          </div>
+
+
+          <div class="info-card">
+
+            <div class="icon">
+              ♥
+            </div>
+
+            <h3>
+              Blik Skud
+            </h3>
+
+            <p>
+              Everyone is welcome.
+              Be at Woodmead Retail Park
+              before 17:00.
+            </p>
+
+          </div>
+
+
+          <div class="info-card">
+
+            <div class="icon">
+              ♦
+            </div>
+
+            <h3>
+              Casino Night
+            </h3>
+
+            <p>
+              Everyone is expected to join.
+              Be at Shingara Sands by 19:00.
+              We're going late.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================
+       FOOTER
+  ====================================== -->
+
+  <footer>
+
+    <p>
+      Here's to the bride-to-be. 🥂
+    </p>
+
+    <br>
+
+    <strong>
+      May the odds be ever in her favour.
+    </strong>
+
+  </footer>
+
+
+  <!-- =====================================
+       COUNTDOWN SCRIPT
+  ====================================== -->
+
+  <script>
+
+    /*
+      Event starts:
+      Saturday 24 October 2026
+      11:00 South Africa time
+
+      South Africa = UTC+2
+    */
+
+    const eventDate =
+      new Date("2026-10-24T11:00:00+02:00").getTime();
+
+
+    function updateCountdown() {
+
+      const now =
+        new Date().getTime();
+
+      const difference =
+        eventDate - now;
+
+
+      if (difference <= 0) {
+
+        document.getElementById("days").textContent = "0";
+        document.getElementById("hours").textContent = "0";
+        document.getElementById("minutes").textContent = "0";
+        document.getElementById("seconds").textContent = "0";
+
+        return;
+      }
+
+
+      const days =
+        Math.floor(
+          difference /
+          (1000 * 60 * 60 * 24)
+        );
+
+
+      const hours =
+        Math.floor(
+          (difference %
+            (1000 * 60 * 60 * 24)) /
+            (1000 * 60 * 60)
+        );
+
+
+      const minutes =
+        Math.floor(
+          (difference %
+            (1000 * 60 * 60)) /
+            (1000 * 60)
+        );
+
+
+      const seconds =
+        Math.floor(
+          (difference %
+            (1000 * 60)) /
+            1000
+        );
+
+
+      document.getElementById("days")
+        .textContent = days;
+
+      document.getElementById("hours")
+        .textContent =
+        String(hours).padStart(2, "0");
+
+      document.getElementById("minutes")
+        .textContent =
+        String(minutes).padStart(2, "0");
+
+      document.getElementById("seconds")
+        .textContent =
+        String(seconds).padStart(2, "0");
+    }
+
+
+    updateCountdown();
+
+    setInterval(
+      updateCountdown,
+      1000
+    );
+
+  </script>
+
+</body>
+</html>
